@@ -1,0 +1,190 @@
+html {
+
+	.source-serif-4 {
+		font-family: "Source Serif 4", serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+	}
+
+	.kaisei-decol-regular {
+		font-family: "Kaisei Decol", serif;
+		font-weight: 400;
+		font-style: normal;
+	}
+
+
+	.montserrat {
+		font-family: "Montserrat", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+	}
+
+	.noto-sans-jp {
+		font-family: "Noto Sans JP", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+	}
+	
+
+	.playfair-display{
+	  font-family: "Playfair Display", serif;
+	  font-optical-sizing: auto;
+	  font-weight: 600;
+	  font-style: normal;
+	}
+	
+	.hina-mincho-regular {
+	  font-family: "Hina Mincho", serif;
+	  font-weight: 100;
+	  font-style: normal;
+	}
+
+
+}
+
+.pop {
+	font-family: "Hina Mincho", serif;
+	font-weight: 100;
+
+	/*	font-family: "Source Serif 4", serif;*/
+}
+
+.container {
+	width: 90%;
+	max-width: 1120px;
+	/*		右と左にイイ感じに幅を作ってね*/
+	margin: 0 auto;
+	position: relative;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+/*ヘッダー*/
+header {
+	/*	上下のスペース　縦　横*/
+	padding: 27px 0;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+.logo span {
+/*	color: #0077B6*/
+}
+
+.header_menu li {
+	font-family: " Montserrat", sans-serif;
+	margin-left: 40px;
+}
+
+.header_menu li a {
+	transition: .3s;
+}
+
+/*	hover -マウスカーソルを当てたときのみ色が変わるように*/
+.header_menu li a:hover {
+	color: #D90429;
+	transition: .3s;
+}
+
+/*メイン*/
+#hero {
+	background-image: url(../images/Yamato_shoumen.JPG);
+	background-position: top;
+	background-size: cover;
+	height: 600px;
+	/*角を丸める*/
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 90px;
+	/*	はみ出たところはカット*/
+	overflow: hidden;
+}
+
+/*擬似要素*/
+#hero::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*	透過*/
+	opacity: 0.2;
+	z-index: 1;
+}
+
+.hero_inner {
+	z-index: 2;
+	color: #ffffff;
+	width: 100%;
+	text-align: center;
+}
+
+.hero_inner p {
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 16px;
+}
+
+.hero_inner h1 {
+	font-size: 32px;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+
+.cast_background {
+  width: 100%;
+  height: 800px;
+
+  /* 背景画像を表示 */
+  background-image: url(../images/Yamato_shoumen.JPG);
+
+  position: relative;
+  top: 100px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.cast_background::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cast_background_copy {
+  position: relative;
+  z-index: 10;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 56px;
+  font-weight: bold;
+}
+
+
